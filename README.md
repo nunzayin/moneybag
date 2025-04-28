@@ -10,7 +10,7 @@ just has a name and a balance that is a natural (better say non-negative since
 it can be also zero) integer number. Since it's a *money*bag the thing the bag
 contains is called **money**.
 - There is also a special **"bottomless"** bag that is always available. You
-can take infinite amounts of money and put it there too.\
+can take infinite amounts of money and put it there too.
 
 A **tag** is a named list of bag names so you can categorize your bags by
 tagging them and then addressing to them with this tag.\
