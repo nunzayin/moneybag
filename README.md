@@ -1,4 +1,4 @@
-# moneybag
+# `moneybag`
 
 `moneybag` is a simple and minimal app based on transferring between so-called
 bags.

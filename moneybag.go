@@ -1,25 +1,41 @@
 package main
 
-type Bags map[string]uint
-type Tags map[string][]string
-type State struct {
-	bags Bags
-	tags Tags
+import (
+	"errors"
+)
+
+const (
+	BOTTOMLESS = "_"
+	TAG_PREFIX = "#"
+)
+
+type (
+	State struct {
+		bags map[string]uint
+		tags map[string][]string
+	}
+	Amount interface {
+		get() uint
+	}
+	Transfer struct {
+		source string
+		destination string
+		amount Amount
+		comment string
+	}
+	Tagging struct {
+		tag string
+		names []string
+	}
+	Modifier interface {
+		eval(state *State)
+	}
+	Book []Modifier
+)
+
+func (transfer Transfer) eval(state *State) error {
+	
 }
-type Transfer struct {
-	source string
-	destination string
-	amount int
-	comment string
-}
-type Tagging struct {
-	tag string
-	names []string
-}
-type Modifier interface {
-	eval(state State)
-}
-type Book []Modifier
 
 func main() {
 
